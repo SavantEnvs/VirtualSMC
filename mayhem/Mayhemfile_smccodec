@@ -1,0 +1,9 @@
+project: savantenvs/VirtualSMC
+target: smccodec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/smccodec/testsuite
+cmds:
+  - cmd: /mayhem/smccodec
+    libfuzzer: true
+    timeout: 60
